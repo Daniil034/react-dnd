@@ -1,0 +1,17 @@
+@import "../../UI/variables";
+
+.input-button {
+  border: 1px solid $gray200;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 15px;
+  height: 48px;
+
+  &--span-2 {
+    grid-column: 1/3;
+  }
+}

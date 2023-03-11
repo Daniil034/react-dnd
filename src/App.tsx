@@ -1,24 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { DragDropContext } from "react-beautiful-dnd";
+import { Sidebar } from "./components/Sidebar";
+import { DisplayBlock } from "./components/DisplayBlock";
+import { OperatorsBlock } from "./components/OperatorsBlock";
+import { DigitsBlock } from "./components/DigitsBlock";
+import { EqualButtonBlock } from "./components/EqualButtonBlock";
+import "./App.css";
+import { Canvas } from "./components/Canvas";
+
+const sidebar = [
+  <DisplayBlock />,
+  <OperatorsBlock />,
+  <DigitsBlock />,
+  <EqualButtonBlock />,
+];
 
 function App() {
+  const onDragEnd = (result: any) => {};
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DragDropContext onDragEnd={onDragEnd}>
+        <div className="droppable-area">
+          <Sidebar droppableId="1">
+            <DisplayBlock />
+            <OperatorsBlock />
+            <DigitsBlock />
+            <EqualButtonBlock />
+          </Sidebar>
+          <Canvas droppableId="2" />
+        </div>
+      </DragDropContext>
     </div>
   );
 }

@@ -1,0 +1,13 @@
+@import "../../UI/variables";
+
+.display {
+  background-color: $gray100;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 44px;
+}

@@ -1,0 +1,15 @@
+@import "../../UI/variables";
+
+.equal-button {
+  background-color: $iris100;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 15px;
+  color: $white;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
